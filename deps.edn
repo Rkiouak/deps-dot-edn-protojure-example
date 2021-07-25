@@ -1,0 +1,29 @@
+{:deps                                                ;; <1>
+        {io.pedestal/pedestal.service {:mvn/version "0.5.9"}
+         io.pedestal/pedestal.route   {:mvn/version "0.5.7"}
+         io.pedestal/pedestal.jetty   {:mvn/version "0.5.7"}
+         org.slf4j/slf4j-simple       {:mvn/version "1.7.28"}
+         ;; -- PROTOC-GEN-CLOJURE --
+         protojure {:mvn/version "1.6.1"}
+         protojure/google.protobuf {:mvn/version "0.9.1"}
+
+         ;; -- PROTOC_GEN_CLOJURE CLIENT DEPS --
+         org.eclipse.jetty.http2/http2-client {:mvn/version "11.0.5"}
+         org.eclipse.jetty/jetty-alpn-java-client {:mvn/version "11.0.5"}
+         ;; -- Jetty Client Dep --
+         org.ow2.asm/asm {:mvn/version "9.1"}
+
+         ;; Include Undertow for supporting HTTP/2 for GRPCs
+         io.undertow/undertow-core {:mvn/version "2.2.8.Final"}
+         io.undertow/undertow-servlet {:mvn/version "2.2.8.Final"}
+         ;; And of course, protobufs
+         com.google.protobuf/protobuf-java {:mvn/version "3.17.3"}
+         ;; logging
+         com.taoensso/timbre {:mvn/version "5.1.2"}
+         com.fzakaria/slf4j-timbre {:mvn/version "0.3.21"}
+
+         ch.qos.logback/logback-classic {:mvn/version "1.2.3"}
+         org.slf4j/jul-to-slf4j {:mvn/version "1.7.30"}
+         org.slf4j/jcl-over-slf4j {:mvn/version "1.7.30"}
+         org.slf4j/log4j-over-slf4j {:mvn/version "1.7.30"}}
+ :paths ["src"]}                                      ;; <2>
